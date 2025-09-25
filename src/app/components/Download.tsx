@@ -14,7 +14,7 @@ export default function Download() {
     } else {
       alert('Please enter your mobile number');
     }
-  };
+  }; 
 
   return (
   <div className='bg-[#f2f1f9] pb-6 pt-6 '>

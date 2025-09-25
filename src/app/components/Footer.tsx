@@ -17,7 +17,7 @@ export default function Footer() {
             
           </h2>
           <p className="text-sm mb-6">
-            Sanjivani NGO.
+            Sanjivani NGO
           </p>
           <div className="flex gap-4">  
             <a href="#" aria-label="Facebook">

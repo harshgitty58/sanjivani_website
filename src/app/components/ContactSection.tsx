@@ -16,7 +16,7 @@ const ContactSection = () => {
           <h1 className="text-4xl lg:text-5xl font-bold mb-4">Let&apos;s Discuss your</h1>
           <div className="inline-block bg-white px-4 py-2 rounded-md">
             <span className="text-4xl lg:text-5xl font-bold text-purple-800">
-              Social Work Plan
+              Social Work Plan 
             </span>
           </div>
           <p className="mt-6 text-lg text-white max-w-md">
