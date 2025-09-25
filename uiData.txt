@@ -1,0 +1,8 @@
+lineargradient(to bottom , #051322, #15457c)
+bg-rgb(232,232,232) #f2f2f2;
+bg-img-height:648px;
+
+gradients
+
+1) for main containers
+linear-gradient(90deg, rgb(234, 245, 255), rgb(255, 255, 255));
