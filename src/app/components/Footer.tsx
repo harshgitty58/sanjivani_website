@@ -43,7 +43,9 @@ export default function Footer() {
             <li><a href="#" className="hover:text-yellow-500">Career</a></li>
             <li><a href="#" className="hover:text-yellow-500">Privacy Policy</a></li>
             <li><a href="#" className="hover:text-yellow-500">Terms & Conditions</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Investor Corner</a></li>
+            <li><a href="#" className="hover:text-yellow-500">FAQ’s</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Refund Policy</a></li>
+
           </ul>
         </div>
 
@@ -51,23 +53,26 @@ export default function Footer() {
           <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-yellow-500">Login/Register</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Vendor Registration</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Newsletter</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Offers</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Photo Gallery</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Video Gallery</a></li>
+            <li><a href="#" className="hover:text-yellow-500">News</a></li>
             <li><a href="#" className="hover:text-yellow-500">Blogs</a></li>
-            <li><a href="#" className="hover:text-yellow-500">FAQ’s</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Government Partner</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Corporate Partner</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 className="font-semibold text-lg mb-4">Services</h3>
+          <h3 className="font-semibold text-lg mb-4">Volunteer</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:text-yellow-500">Airport NGO Services</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Outstation NGO Services</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Hourly Rental</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Corporate Mobility</a></li>
-            <li><a href="#" className="hover:text-yellow-500">Airport Counters</a></li>
-            <li><a href="#" className="hover:text-yellow-500">FleetPro</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Internship</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Share NGO Banner</a></li>
+            <li><a href="#" className="hover:text-yellow-500">CSR Opportunity</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Volunteer Publication</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Donate In Honour of</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Donate In Memory of</a></li>
+            <li><a href="#" className="hover:text-yellow-500">Donate on Occasion of</a></li>
+            
           </ul>
         </div>
 
