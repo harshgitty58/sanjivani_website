@@ -110,7 +110,7 @@ export default function PopularAirportCabs() {
   return (
     <section className="bg-[#F4F2FA] py-5 px-4 md:px-10">
       <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#1E0972] mb-10">
-        We Provide Airport Pickup & Drop
+        United Nations 17 Sustainable Development Goals
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2">
