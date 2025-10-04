@@ -9,7 +9,7 @@ export default function Testimonial() {
   <div className="bg-[#f2f1f9]">  
     <div className="py-1 px-1 flex flex-col justify-center pb-6 pt-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
-        WHAT PEOPLE SAY ABOUT US
+        What people say about us
       </h2>
 
       <motion.div
