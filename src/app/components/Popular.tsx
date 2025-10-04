@@ -5,49 +5,48 @@ import Image from 'next/image';
  
 const cabData = [
   {
-    city: 'Pune',
+    city: 'No Poverty',
     image: '/images/Popular/Pune.png',
-    destinations: ['Mumbai', 'Solapur', 'Latur','Goa'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Mumbai',
+    city: 'Zero Hunger',
     image: '/images/Popular/Mumbai.png',
-    destinations: ['Hyderabad', 'Bangalore', 'Pune','Goa'],
-  },
+    destinations: ['Projects', ],},
   {
-    city: 'Bangalore',
+    city: 'Good Health',
     image: '/images/Popular/Bangalore.png',
-    destinations: ['Pune', 'Mumbai', 'Goa'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Indore',
+    city: 'Quality Education',
     image: '/images/Popular/Indore.png',
-    destinations: ['Pune', 'Mumbai', 'Goa'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Ahmedabad',
+    city: 'Gender Equality',
     image: '/images/Popular/Ahmedabad.png',
-    destinations: ['Surat', 'Mumbai', 'Pune'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Latur',
+    city: 'Clean Water',
     image: '/images/Popular/Latur.png',
-    destinations: ['Mumbai', 'Goa', 'Pune'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Chennai',
+    city: 'Clean Energy',
     image: '/images/Popular/Chennai.png',
-    destinations: ['Tirupati', 'Madurai', 'Puducherry'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Hyderabad',
+    city: 'Work and Economic Growth',
     image: '/images/Popular/Hyderabad.png',
-    destinations: ['Mumbai', 'Goa', 'Pune'],
+    destinations: ['Projects', ],
   },
   {
-    city: 'Goa',
+    city: 'Infrastructure',
     image: '/images/Popular/goa.jpg',
-    destinations: ['Pune', 'Mumbai', 'Hampi'],
+    destinations: ['Projects', ],
   },
 ];
 
@@ -55,7 +54,7 @@ export default function PopularAirportNGO() {
   return (
     <section className="bg-gray-50 py-5 px-4 md:px-16">
       <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#1E0972] mb-10">
-        Our Area of work
+        United Nations 17 Sustainable Development Goals
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
