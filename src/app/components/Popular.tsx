@@ -126,7 +126,7 @@ export default function PopularAirportCabs() {
             <div>
               <h3 className="text-base font-semibold text-gray-800">{city}</h3>
               <p className="text-sm text-gray-600">
-                To:{' '}
+                {' '}
                 {destinations.map((d, i) => (
                   <span key={i} className="text-blue-600 hover:underline cursor-pointer">
                     • {d}{' '}
