@@ -108,20 +108,20 @@ const cabData = [
 
 export default function PopularAirportCabs() {
   return (
-    <section className="bg-[#F4F2FA] py-5 px-4 md:px-8">
+    <section className="bg-[#F4F2FA] py-5 px-4 md:px-10">
       <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#1E0972] mb-10">
         We Provide Airport Pickup & Drop
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2">
         {cabData.map(({ city, image, destinations }) => (
-          <div key={city} className="bg-white rounded-xl shadow-sm flex gap-4 items-center p-4">
+          <div key={city} className="bg-white rounded-xl shadow-sm flex gap-4 items-center p-1">
             <Image
               src={image}
               alt={city}
               width={64}
               height={64}
-              className="w-16 h-16 object-cover rounded-md"
+              className="w-20 h-20 object-cover rounded-md"
             />
             <div>
               <h3 className="text-base font-semibold text-gray-800">{city}</h3>
