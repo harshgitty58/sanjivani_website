@@ -103,7 +103,7 @@ const cabData = [
   { city: 'Life Below Water', image: '/images/Popular/sdg14.png', destinations: ['Project'] },
   { city: 'Life on Land', image: '/images/Popular/sdg15.png', destinations: ['Project'] },
   { city: 'Peace and Justice', image: '/images/Popular/sdg16.png', destinations: ['Project'] },
-  { city: 'Partnerships', image: '/images/Popular/sdg17.png', destinations: ['Project'] },
+  { city: 'Partner ships', image: '/images/Popular/sdg17.png', destinations: ['Project'] },
 ];
 
 export default function PopularAirportCabs() {
@@ -113,7 +113,7 @@ export default function PopularAirportCabs() {
         We Provide Airport Pickup & Drop
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {cabData.map(({ city, image, destinations }) => (
           <div key={city} className="bg-white rounded-xl shadow-sm flex gap-4 items-center p-4">
             <Image
