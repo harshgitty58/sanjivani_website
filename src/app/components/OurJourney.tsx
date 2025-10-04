@@ -514,7 +514,7 @@ export default function OurJourney() {
   const goNext = () => setActiveIndex((prev) => (prev < timelineData.length - 1 ? prev + 1 : 0));
 
   return (
-    <section className="relative w-full min-h-screen bg-gradient-to-b from-white via-gray-50 to-white text-black font-sans overflow-hidden">
+    <section className="relative w-full min-h-screen bg-[#f2f1f9] from-white via-gray-50 to-white text-black font-sans overflow-hidden">
       {/* Background Overlay */}
       <div className="absolute inset-0 opacity-5 bg-[url('/images/bg1.jpg')] bg-cover bg-center" />
 

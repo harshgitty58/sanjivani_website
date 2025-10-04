@@ -35,13 +35,13 @@ const ContactSection = () => {
               />
               <p className="text-red-500 text-sm mt-1">required</p>
             </div>
-            <div>
+            {/* <div>
               <input
                 type="text"
                 placeholder="Location"
                 className="w-full placeholder-white border-2 border-white px-4 py-2 rounded outline-white focus:ring-2 focus:ring-purple-600"
               />
-            </div>
+            </div> */}
             <div>
               <input
                 type="tel"
@@ -51,13 +51,13 @@ const ContactSection = () => {
               />
               <p className="text-red-500 text-sm mt-1">required</p>
             </div>
-            <div>
+            {/* <div>
               <input
                 type="email"
                 placeholder="Email Address"
                 className="w-full placeholder-white border-2 border-white px-4 py-2 rounded outline-white focus:ring-2 focus:ring-purple-600"
               />
-            </div>
+            </div> */}
           </div>
           <div>
             <textarea

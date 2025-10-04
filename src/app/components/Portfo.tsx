@@ -41,7 +41,10 @@ export default function Portfo() {
   };
 
   return (
-    <section className="relative w-screen-1 h-screen">
+    <section className="relative w-screen-1 h-screen bg-[#f2f1f9]">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
+        Our Portfolios
+      </h2>
       <button
         onClick={() => scroll('left')}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"

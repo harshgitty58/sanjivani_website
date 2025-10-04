@@ -108,8 +108,8 @@ const cabData = [
 
 export default function PopularAirportCabs() {
   return (
-    <section className="bg-[#F4F2FA] py-5 px-4 md:px-10">
-      <h2 className="text-2xl md:text-3xl font-semibold text-center text-[#1E0972] mb-10">
+    <section className="bg-[#f2f1f9] py-5 px-4 md:px-10 pb-8">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
         United Nations 17 Sustainable Development Goals
       </h2>
 
