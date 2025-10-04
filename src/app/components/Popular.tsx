@@ -23,7 +23,6 @@ const cabData = [
   { city: 'Partnerships', image: '/images/Popular/sdg17.png', destinations: ['Projects'] },
 ];
 
-// helper → groups 2 items together
 function chunkArray(arr: any[], size: number) {
   const result = [];
   for (let i = 0; i < arr.length; i += size) {
