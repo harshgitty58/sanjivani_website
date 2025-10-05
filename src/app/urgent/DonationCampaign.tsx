@@ -34,7 +34,28 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
     </div>
     MEDICAL
   </div>
+
+
+
+<div className="inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-sm font-bold text-gray-900 shadow-sm">
+    <div className="bg-cyan-400 p-1 rounded-full mr-2 flex items-center justify-center">
+      <BriefcaseMedical className="w-4 h-4 text-white" />
+    </div>
+    Verified Project
+  </div>
+
+  <div className="inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-sm font-bold text-gray-900 shadow-sm">
+    <div className="bg-cyan-400 p-1 rounded-full mr-2 flex items-center justify-center">
+      <BriefcaseMedical className="w-4 h-4 text-white" />
+    </div>
+    Verified Beneficiary
+  </div>
+
+
+
 </div>
+
+
 
       <div className="grid md:grid-cols-2 gap-8 mt-6">
         {/* LEFT: Image and Tags */}
