@@ -8,12 +8,11 @@ export default function Testimonial() {
   return (
     <div className="bg-[#f2f1f9] py-6">
       <div className="px-4 flex flex-col justify-center">
-        {/* Heading */}
+  
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-indigo-800 mb-6">
           What people say about us
         </h2>
 
-        {/* Card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,7 +22,6 @@ export default function Testimonial() {
           rounded-2xl p-4 w-[70%] mx-auto flex flex-col sm:flex-row items-center 
           group overflow-hidden"
         >
-          {/* Image */}
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
@@ -37,7 +35,6 @@ export default function Testimonial() {
             />
           </motion.div>
 
-          {/* Text */}
           <div className="relative text-left">
             <motion.div
               initial={{ scale: 0 }}

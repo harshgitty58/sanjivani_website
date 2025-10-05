@@ -10,7 +10,7 @@ import Categories from "./components/screens/Categories";
 import Donation from '@/app/components/Donation';
 import OurJourney from '@/app/components/OurJourney';
 import Portfo from '@/app/components/Portfo';
-// import JoinPage from '@/app/components/JoinPage';
+import ChatBot from '@/app/components/ChatBot';
 import Testimonial from '@/app/components/Testimonial';
 
 export default function Home() {
@@ -35,6 +35,7 @@ export default function Home() {
         <Testimonial />
         <Download />
         <FaqSection />
+        <ChatBot />
         <Footer />
       </div>
   )

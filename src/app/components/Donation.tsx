@@ -72,7 +72,6 @@ export default function DonationPage() {
       </h2>
 
         <div className="relative">
-          {/* Left Arrow */}
           <button
             onClick={() => scroll('left')}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
@@ -80,7 +79,6 @@ export default function DonationPage() {
             <ChevronLeft size={24} />
           </button>
 
-          {/* Campaigns Container (no scrollbar) */}
           <div
             ref={scrollRef}
             className="flex gap-6 px-8 scroll-smooth overflow-x-auto scrollbar-hide"
@@ -138,7 +136,6 @@ export default function DonationPage() {
             ))}
           </div>
 
-          {/* Right Arrow */}
           <button
             onClick={() => scroll('right')}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
