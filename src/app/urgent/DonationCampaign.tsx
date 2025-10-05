@@ -66,7 +66,7 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
               <div className="flex-1">
                 <div className="flex justify-between items-center">
                   <h4 className="text-gray-800 font-semibold">Campaigner Details</h4>
-                  <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-green-600 font-medium">VERIFIED ✅</span>
+                  {/* <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-green-600 font-medium">VERIFIED ✅</span> */}
                 </div>
                 <hr className="my-2" />
                 <p className="text-gray-800 font-medium">Akshaykumar Vasant Jadhav</p>
@@ -84,7 +84,7 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
               <div className="flex-1">
                 <div className="flex justify-between items-center">
                   <h4 className="text-gray-800 font-semibold">Beneficiary Details</h4>
-                  <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-green-600 font-medium">VERIFIED ✅</span>
+                  {/* <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-green-600 font-medium">VERIFIED ✅</span> */}
                 </div>
                 <hr className="my-2" />
                 <p className="text-gray-800 text-sm">Vasant Tukaram Jadhav</p>

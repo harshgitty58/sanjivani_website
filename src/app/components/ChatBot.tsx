@@ -57,16 +57,16 @@ export default function ChatBot() {
         className="fixed bottom-6 right-6 z-50 cursor-pointer"
         onClick={toggleChat}
       >
-        <div className="relative w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
+        <div className="relative w-15 h-15 bg-white rounded-full shadow-lg flex items-center justify-center">
           <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
             1
           </span>
           <Image
             src="/images/sanjivani-logo.png"
             alt="Chat Icon"
-            width={30}
-            height={30}
-          />
+            width={75}
+            height={75}
+          />    
         </div>
       </div>
 
@@ -89,8 +89,8 @@ export default function ChatBot() {
                   <Image
                     src="/images/rahul.png"
                     alt="Bot"
-                    width={28}
-                    height={28}
+                    width={50}
+                    height={50}
                   />
                 )}
                 <div

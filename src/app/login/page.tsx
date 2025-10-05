@@ -101,7 +101,7 @@ export default function Login() {
                         </>
                     )}
 
-                    {formType === "vendorRegister" && (
+                    {formType === "volunteer" && (
                         <>
                             <FormInput label="Full Name" icon='user' type="text" value={vendorRegister.name} onChange={(value) => handleVendorRegister('name', value)} />
                             <FormInput label="Location" icon='user' type="text" value={vendorRegister.location} onChange={(value) => handleVendorRegister('location', value)} />
@@ -129,7 +129,7 @@ export default function Login() {
                     <div className='text-center w-full mt-3 flex justify-evenly'>
                         {formType === "login" ? (
                             <>
-                                <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("vendorRegister")}>Vendor Register ?</button>
+                                <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("vendorRegister")}>volunteer</button>
                                 <button type="button" className='text-purple-600 underline text-sm cursor-pointer' onClick={() => setFormType("corporateRegister")}>Corporate Register ?</button>
                             </>
                         ) : (
