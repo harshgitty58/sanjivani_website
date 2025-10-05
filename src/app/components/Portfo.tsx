@@ -41,47 +41,55 @@ export default function Portfo() {
   };
 
   return (
-    <section className="relative w-screen-1 h-[500px] bg-[#f2f1f9]">
+    <section className="relative w-full bg-[#f2f1f9] pt-1 pb-0">
+      {/* Section Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
         Our Portfolios
       </h2>
-      <button
-        onClick={() => scroll('left')}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"
-      >
-        <ChevronLeft size={24} />
-      </button>
-      <button
-        onClick={() => scroll('right')}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"
-      >
-        <ChevronRight size={24} />
-      </button>
 
-      <div
-        ref={scrollRef}
-        className="flex h-full overflow-x-auto scroll-smooth no-scrollbar"
-      >
-        {cardData.map((card, index) => (
-          <div
-            key={index}
-            className="relative w-[24.7vw] h-full flex-shrink-0 group overflow-hidden transition-all duration-500"
-          >
-            <Image
-              src={card.image}
-              alt={card.title}
-              layout="fill"
-              objectFit="cover"
-              className="group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-end items-start p-6 text-white">
-              <p className="text-lg font-medium mb-4">{card.title}</p>
-              <button className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100 transition">
-                {card.buttonText}
-              </button>
+      {/* Scrollable area + arrows */}
+      <div className="relative">
+        {/* Left Scroll Button */}
+        <button
+          onClick={() => scroll('left')}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"
+        >
+          <ChevronLeft size={24} />
+        </button>
+
+        {/* Right Scroll Button */}
+        <button
+          onClick={() => scroll('right')}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white rounded-full shadow hover:bg-gray-100"
+        >
+          <ChevronRight size={24} />
+        </button>
+
+        {/* Scrollable Cards */}
+        <div
+          ref={scrollRef}
+          className="flex h-[400px] overflow-x-auto scroll-smooth no-scrollbar"
+        >
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className="relative w-[24.7vw] h-full flex-shrink-0 group overflow-hidden transition-all duration-500"
+            >
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/50 flex flex-col justify-end items-start p-6 text-white">
+                <p className="text-lg font-medium mb-4">{card.title}</p>
+                <button className="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100 transition">
+                  {card.buttonText}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
