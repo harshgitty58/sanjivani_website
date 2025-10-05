@@ -330,7 +330,6 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of Sanjivani NGO',
   },
-
   {
     year: '2009',
     title: 'OUR JOURNEY',
@@ -341,7 +340,6 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of Sanjivani NGO',
   },
-
   {
     year: '2010',
     title: 'OUR JOURNEY',
@@ -352,7 +350,6 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of Sanjivani NGO',
   },
-
   {
     year: '2011',
     title: 'OUR JOURNEY',
@@ -383,7 +380,7 @@ const timelineData = [
     person: 'Party Leadership',
     designation: 'Leaders of the 1967 Coalition',
   },
-    {
+  {
     year: '2014',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -393,7 +390,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-    {
+  {
     year: '2015',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -403,7 +400,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-    {
+  {
     year: '2016',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -413,7 +410,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-    {
+  {
     year: '2017',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -423,7 +420,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-    {
+  {
     year: '2018',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -433,7 +430,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-    {
+  {
     year: '2019',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -443,7 +440,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-    {
+  {
     year: '2020',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -453,7 +450,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-      {
+  {
     year: '2021',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -463,7 +460,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-      {
+  {
     year: '2022',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -473,7 +470,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-      {
+  {
     year: '2023',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -483,7 +480,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-      {
+  {
     year: '2024',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -493,7 +490,7 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-      {
+  {
     year: '2025',
     title: 'OUR JOURNEY',
     subtitle: 'Birth of Sanjivani NGO',
@@ -503,15 +500,16 @@ const timelineData = [
     person: 'Adv. Rahul Chavan',
     designation: 'Founder of the Sanjivani NGO',
   },
-  // ... rest of your data
 ];
 
 export default function OurJourney() {
   const [activeIndex, setActiveIndex] = useState(0);
   const current = timelineData[activeIndex];
 
-  const goPrev = () => setActiveIndex((prev) => (prev > 0 ? prev - 1 : timelineData.length - 1));
-  const goNext = () => setActiveIndex((prev) => (prev < timelineData.length - 1 ? prev + 1 : 0));
+  const goPrev = () =>
+    setActiveIndex((prev) => (prev > 0 ? prev - 1 : timelineData.length - 1));
+  const goNext = () =>
+    setActiveIndex((prev) => (prev < timelineData.length - 1 ? prev + 1 : 0));
 
   return (
     <section className="relative w-full min-h-screen bg-[#f2f1f9] from-white via-gray-50 to-white text-black font-sans overflow-hidden">
@@ -603,17 +601,8 @@ export default function OurJourney() {
             </button>
           ))}
         </div>
-
-        {/* Progress Bar */}
-        <div className="mt-5 w-64 h-2 bg-gray-200 rounded-full overflow-hidden shadow-inner">
-          <motion.div
-            className="h-full bg-orange-500"
-            initial={{ width: 0 }}
-            animate={{ width: `${((activeIndex + 1) / timelineData.length) * 100}%` }}
-            transition={{ duration: 0.5 }}
-          />
-        </div>
       </div>
     </section>
   );
 }
+

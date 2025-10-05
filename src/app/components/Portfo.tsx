@@ -41,7 +41,7 @@ export default function Portfo() {
   };
 
   return (
-    <section className="relative w-screen-1 h-screen bg-[#f2f1f9]">
+    <section className="relative w-screen-1 h-[500px] bg-[#f2f1f9]">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
         Our Portfolios
       </h2>

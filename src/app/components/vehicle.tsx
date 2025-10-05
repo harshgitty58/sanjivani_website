@@ -29,7 +29,7 @@ const Vehicle = () => {
 
   return (
     <section className="py-5 bg-[#f2f1f9]">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-10">
         Our Portfolios
       </h2>
 

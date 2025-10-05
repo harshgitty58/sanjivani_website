@@ -22,7 +22,7 @@ export default function Home() {
             src="/ngo-banner-next/assets/menu-below-slider.html"
             title="NGO Banner Next"
             className="w-full h-full border-0"
-          />
+          />   
         </div>
         {/* <Categories /> */}
         <OurJourney />

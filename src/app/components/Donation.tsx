@@ -66,7 +66,7 @@ export default function DonationPage() {
 
   return (
     <div className="flex flex-col bg-[#f2f1f9] mt-12">
-      <div className="px-4 md:px-10 py-10">
+      <div className="px-4 md:px-10 pt-12 pb-6">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
         Our Projects
       </h2>
@@ -83,7 +83,7 @@ export default function DonationPage() {
           {/* Campaigns Container (no scrollbar) */}
           <div
             ref={scrollRef}
-            className="flex gap-6 pb-4 px-8 scroll-smooth overflow-x-auto scrollbar-hide"
+            className="flex gap-6 px-8 scroll-smooth overflow-x-auto scrollbar-hide"
           >
             {campaigns.map((item) => (
               <div
@@ -143,7 +143,7 @@ export default function DonationPage() {
             onClick={() => scroll('right')}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={24} />  
           </button>
         </div>
       </div>
