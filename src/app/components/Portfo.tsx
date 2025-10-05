@@ -41,7 +41,7 @@ export default function Portfo() {
   };
 
   return (
-    <section className="relative w-full bg-[#f2f1f9] pt-1 pb-0">
+    <section className="relative h-[400px] w-full bg-[#f2f1f9] pb-0">
       {/* Section Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
         Our Portfolios

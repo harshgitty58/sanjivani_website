@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone, Facebook, Twitter, Youtube, Instagram } from 'luci
 export default function Footer() {
   return (
     <footer className="bg-[url(/images/Vehicle/footer.jpg)] bg-no-repeat bg-cover text-white font-bold py-14 px-6 md:px-20">
-      <div className="bg-black opacity-70 p-10">
+      <div className="bg-black opacity-45 p-10">
 
       
       <div className="z-100 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12">
