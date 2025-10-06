@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const countries = [
 
-  { name: 'Wipro', image: '/images/Explore/Kolhapur.png' },
+  
   { name: 'Sangli', image: '/images/Explore/Sangli.png' },
   { name: 'Satara', image: '/images/Explore/Satara.png' },
   { name: 'Solapur', image: '/images/Explore/Solapur.png' },
