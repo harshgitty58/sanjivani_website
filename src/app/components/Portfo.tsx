@@ -6,8 +6,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const cardData = [
   { title: 'Education', image: '/images/banner/b2.jpg', buttonText: 'PROJECTS' },
-  { title: 'Children', image: '/images/banner/b4.jpg', buttonText: 'PROJECTS' },
-  { title: 'Old Age', image: '/images/banner/b3.jpg', buttonText: 'PROJECTS' },
+  { title: 'Children', image: '/images/banner/b3.jpg', buttonText: 'PROJECTS' },
+  { title: 'Old Age', image: '/images/banner/b4.jpg', buttonText: 'PROJECTS' },
   { title: 'Electricity & Power', image: '/images/banner/b5.jpg', buttonText: 'PROJECTS' },
   { title: 'Food & Hunger', image: '/images/rahul1.png', buttonText: 'PROJECTS' },
   { title: 'Sports', image: '/images/rahul1.png', buttonText: 'PROJECTS' },
