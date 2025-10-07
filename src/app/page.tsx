@@ -29,11 +29,11 @@ export default function Home() {
         <OurJourney />
         <Portfo />
         <Donation />
-        <Explore />
         {/* <Vehicle />     */}
         {/* <Popular /> */}
         <SDGGrid />
         <ContactSection />
+        <Explore />
         <Testimonial />
         <Download />
         <FaqSection />

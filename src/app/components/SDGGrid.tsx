@@ -25,7 +25,7 @@ const goals = [
 
 export default function SDGGrid() {
   return (
-    <div className="bg-[#f2f1f9] py-6 px-0 md:px-0">
+    <div className="bg-[#f2f1f9] py-6 px-3 md:px-6">
       {/* <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
         United Nations 17 Sustainable Development Goals
       </h2> */}
@@ -34,7 +34,7 @@ export default function SDGGrid() {
         {goals.map((goal) => (
           <div
             key={goal.id}
-            className="relative overflow-hidden rounded-lg group cursor-pointer h-100"
+            className="relative overflow-hidden group cursor-pointer h-100"
           >
             <Image
               src={goal.image}
