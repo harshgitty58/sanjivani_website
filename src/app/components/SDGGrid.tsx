@@ -21,11 +21,12 @@ const goals = [
   { id: 15, title: 'Life on Land', color: 'bg-[#56c02b]', image: '/images/Popular/sdg15.jpg' },
   { id: 16, title: 'Peace, Justice and Strong Institutions', color: 'bg-[#00689d]', image: '/images/Popular/sdg16.jpg' },
   { id: 17, title: 'Partnerships for the Goals', color: 'bg-[#19486a]', image: '/images/Popular/sdg17.jpg' },
+  { id: 18, title: 'SDG Goals', color: 'bg-[#19486a]', image: '/images/Popular/sdg18.jpg' },
 ];
 
 export default function SDGGrid() {
   return (
-    <div className="bg-[#f2f1f9] py-6 px-0 md:px-0">
+    <div className="bg-[#f2f1f9] py-0 px-0 md:px-0">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0">
         {goals.map((goal) => (
           <div
