@@ -5,10 +5,10 @@ import React from 'react';
 
 const goals = [
   { id: 1, title: 'No Poverty', color: 'bg-[#e5243b]', image: '/images/Popular/sdg1.jpg' },
-  { id: 2, title: 'Zero Hunger', color: 'bg-[#dda63a]', image: '/images/Popular/sdg2.png' },
-  { id: 3, title: 'Good Health and Well-being', color: 'bg-[#4c9f38]', image: '/images/Popular/sdg3.png' },
-  { id: 4, title: 'Quality Education', color: 'bg-[#c5192d]', image: '/images/Popular/sdg4.png' },
-  { id: 5, title: 'Gender Equality', color: 'bg-[#ff3a21]', image: '/images/Popular/sdg5.png' },
+  { id: 2, title: 'Zero Hunger', color: 'bg-[#dda63a]', image: '/images/Popular/sdg2.jpg' },
+  { id: 3, title: 'Good Health and Well-being', color: 'bg-[#4c9f38]', image: '/images/Popular/sdg3.jpg' },
+  { id: 4, title: 'Quality Education', color: 'bg-[#c5192d]', image: '/images/Popular/sdg4.jpg' },
+  { id: 5, title: 'Gender Equality', color: 'bg-[#ff3a21]', image: '/images/Popular/sdg5.jpg' },
   { id: 6, title: 'Clean Water and Sanitation', color: 'bg-[#26bde2]', image: '/images/Popular/sdg6.png' },
   { id: 7, title: 'Affordable and Clean Energy', color: 'bg-[#fcc30b]', image: '/images/Popular/sdg7.png' },
   { id: 8, title: 'Decent Work and Economic Growth', color: 'bg-[#a21942]', image: '/images/Popular/sdg8.png' },
@@ -34,7 +34,7 @@ export default function SDGGrid() {
         {goals.map((goal) => (
           <div
             key={goal.id}
-            className="relative overflow-hidden rounded-lg group cursor-pointer h-100"
+            className="relative overflow-hidden rounded-lg group cursor-pointer h-60"
           >
             <Image
               src={goal.image}
