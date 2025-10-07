@@ -30,7 +30,7 @@ export default function SDGGrid() {
     <div className="bg-[#f2f1f9] py-0 px-0 md:px-0">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0">
         {goals.map((goal) => (
-          <div
+          <div 
             key={goal.id}
             className="relative overflow-hidden h-60 w-full"
           >
