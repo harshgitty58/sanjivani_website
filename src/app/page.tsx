@@ -31,7 +31,7 @@ export default function Home() {
         <Donation />
         <Explore />
         {/* <Vehicle />     */}
-        <Popular />
+        {/* <Popular /> */}
         <SDGGrid />
         <ContactSection />
         <Testimonial />

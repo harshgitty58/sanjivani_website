@@ -25,7 +25,7 @@ const goals = [
 
 export default function SDGGrid() {
   return (
-    <div className="bg-[#f2f1f9] py-6 px-2 md:px-8">
+    <div className="bg-[#f2f1f9] py-6 px-0 md:px-0">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
         United Nations 17 Sustainable Development Goals
       </h2>
