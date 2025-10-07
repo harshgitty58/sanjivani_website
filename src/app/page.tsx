@@ -13,6 +13,7 @@ import Portfo from '@/app/components/Portfo';
 import ChatBot from '@/app/components/ChatBot';
 import Testimonial from '@/app/components/Testimonial';
 import SDGGrid from '@/app/components/SDGGrid';
+import Rank from '@/app/components/Rank';
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         </div>
         {/* <Categories /> */}
         <OurJourney />
+        <Rank />
         <Portfo />
         <Donation />
         {/* <Vehicle />     */}

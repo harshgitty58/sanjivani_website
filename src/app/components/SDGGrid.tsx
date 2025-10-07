@@ -21,7 +21,7 @@ const goals = [
   { id: 15, title: 'Life on Land', color: 'bg-[#56c02b]', image: '/images/Popular/sdg15.jpg' },
   { id: 16, title: 'Peace, Justice and Strong Institutions', color: 'bg-[#00689d]', image: '/images/Popular/sdg16.jpg' },
   { id: 17, title: 'Partnerships for the Goals', color: 'bg-[#19486a]', image: '/images/Popular/sdg17.jpg' },
-  { id: 18, title: 'SDG Goals', color: 'bg-[#19486a]', image: '/images/Popular/sdg18.jpg' },
+  // { id: 18, title: 'SDG Goals', color: 'bg-[#19486a]', image: '/images/Popular/sdg18.jpg' },
 ];
 
 export default function SDGGrid() {
@@ -42,9 +42,9 @@ export default function SDGGrid() {
           </div>
         ))}
 
-        {/* <div className="flex justify-center mt-10 col-span-full">
+        {/* <div className="object-cover">
           <Image
-            src="/images/Popular/sdg.png"
+            src="/images/Popular/sdg18.png"
             alt="Read More Sustainable Development Goals"
             width={200}
             height={200}
