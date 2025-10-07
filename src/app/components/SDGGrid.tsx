@@ -30,7 +30,7 @@ export default function SDGGrid() {
         United Nations 17 Sustainable Development Goals
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0">
         {goals.map((goal) => (
           <div
             key={goal.id}
