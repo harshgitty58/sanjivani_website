@@ -12,6 +12,7 @@ import OurJourney from '@/app/components/OurJourney';
 import Portfo from '@/app/components/Portfo';
 import ChatBot from '@/app/components/ChatBot';
 import Testimonial from '@/app/components/Testimonial';
+import SDGGrid from '@/app/components/SDGGrid';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <Explore />
         {/* <Vehicle />     */}
         <Popular />
+        <SDGGrid />
         <ContactSection />
         <Testimonial />
         <Download />
