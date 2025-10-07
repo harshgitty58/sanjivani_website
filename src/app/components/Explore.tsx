@@ -83,9 +83,9 @@ const Explore = () => {
                 alt={name}
                 width={300}
                 height={300}
-                className="w-full h-48 object-cover"
+                className="w-full h-full object-cover"
               />
-              <div className="text-center mt-2 font-semibold text-indigo-900">{name}</div>
+              {/* <div className="text-center mt-2 font-semibold text-indigo-900">{name}</div> */}
             </div>
           ))}
         </div>
