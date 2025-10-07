@@ -34,11 +34,7 @@ export default function SDGGrid() {
         {goals.map((goal) => (
           <div
             key={goal.id}
-<<<<<<< HEAD
             className="relative overflow-hidden rounded-lg group cursor-pointer h-60"
-=======
-            className="relative overflow-hidden group cursor-pointer h-100"
->>>>>>> 74e41cdb894eb538d6ce64fcb98a41a4693779a6
           >
             <Image
               src={goal.image}
