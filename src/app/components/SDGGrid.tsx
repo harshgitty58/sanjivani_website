@@ -26,9 +26,9 @@ const goals = [
 export default function SDGGrid() {
   return (
     <div className="bg-[#f2f1f9] py-6 px-0 md:px-0">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
+      {/* <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
         United Nations 17 Sustainable Development Goals
-      </h2>
+      </h2> */}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0">
         {goals.map((goal) => (
