@@ -21,6 +21,7 @@ const goals = [
   { id: 15, title: 'Life on Land', image: '/images/Popular/sdg15.png' },
   { id: 16, title: 'Peace, Justice and Strong Institutions', image: '/images/Popular/sdg16.png' },
   { id: 17, title: 'Partnerships for the Goals', image: '/images/Popular/sdg17.png' },
+  { id: 18, title: 'SDG Goals', image: '/images/Popular/sdg18.png' },
 ];
 
 export default function SDGGrid() {
