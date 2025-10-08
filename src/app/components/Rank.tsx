@@ -108,7 +108,6 @@ export default function Rank() {
             ))}
           </div>
 
-          {/* Right Scroll Button */}
           <button
             onClick={() => scroll('right')}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-400 w-10 h-10 flex items-center justify-center rounded-full"
