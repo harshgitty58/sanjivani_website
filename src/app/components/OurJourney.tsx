@@ -286,7 +286,7 @@ export default function OurJourney() {
         </div>
 
       
-        <div className="flex gap-2 overflow-x-auto px-3 sm:px-4 max-w-[95%] scrollbar-hide">
+        <div className="flex gap-6 overflow-x-auto px-3 sm:px-4 w-full max-w-4xl mx-auto scrollbar-hide">
           {timelineData.map((item, index) => (
             <button
               key={index}

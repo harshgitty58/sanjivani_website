@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import { useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -10,21 +9,18 @@ const campaigns = [
     id: 'chest-pain-patient',
     title: 'Help to save life. Chest pain suspecting heart issues.',
     image: '/images/patient.png',
-    fund: '₹70000.0 Lac',
     badge: 'Tax Benefit',
   },
   {
     id: 'food-distribution-vehicle',
     title: 'Sanjivani needs vehicle for distributing food across city.',
     image: '/images/foodcar.png',
-    fund: '₹70000.0 Lac',
     badge: 'Tax Benefit',
   },
   {
     id: 'free-medical-help',
     title: 'Sanjivani Provides Free Medical Help to Needy People',
     image: '/images/medicalhelp.png',
-    fund: '₹70000.0 Lac',
     badge: 'Tax Benefit',
     urgent: true,
   },
@@ -32,7 +28,6 @@ const campaigns = [
     id: 'birthday-celebration',
     title: 'Sanjivani Celebrates Your Birthday',
     image: '/images/birthday.png',
-    fund: '₹70000.0 Lac',
     badge: 'Tax Benefit',
     urgent: true,
   },
@@ -40,13 +35,11 @@ const campaigns = [
     id: 'village-road',
     title: 'Sanjivani helps village people build roads in the village.',
     image: '/images/road.png',
-    fund: '₹70000.0 Lac',
     badge: 'Tax Benefit',
   },
 ];
 
 export default function Rank() {
-  const router = useRouter();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -54,7 +47,7 @@ export default function Rank() {
       const amount = scrollRef.current.offsetWidth;
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -amount : amount,
-        behavior: 'smooth',
+        behavior: 'auto',
       });
     }
   };
@@ -67,68 +60,47 @@ export default function Rank() {
   return (
     <div className="flex flex-col bg-[#f2f1f9] mt-0">
       <div className="px-4 md:px-10 pt-4 pb-6">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
-        India in Global Rankings
-      </h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
+          India in Global Rankings
+        </h2>
 
         <div className="relative">
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-400 w-10 h-10 flex items-center justify-center rounded-full"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} />
           </button>
-
           <div
             ref={scrollRef}
-            className="flex gap-6 px-8 scroll-smooth overflow-x-auto scrollbar-hide"
+            className="flex gap-6 px-8 overflow-x-auto scrollbar-hide"
           >
             {campaigns.map((item) => (
               <div
                 key={item.id}
-                onClick={() => router.push(`/donation/${item.id}`)}
-                className="bg-white rounded-xl shadow-md overflow-hidden cursor-pointer flex-shrink-0 w-[260px] transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                className="relative flex-shrink-0 w-[260px] h-[200px] border border-gray-300 bg-white"
               >
-                <div className="relative h-44 w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover"
-                  />
-                  {item.badge && (
-                    <span className="absolute top-2 left-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">
-                      {item.badge}
-                    </span>
-                  )}
-                  {item.urgent && (
-                    <span className="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
-                      Urgent
-                    </span>
-                  )}
-                </div>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
 
-                <div className="p-4">
-                  <p className="text-sm font-semibold mb-2 text-gray-800 line-clamp-2">
-                    {item.title}
-                  </p>
+                {item.badge && (
+                  <span className="absolute top-2 left-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1">
+                    {item.badge}
+                  </span>
+                )}
 
-                  <div className="flex justify-between text-xs text-gray-600 mb-4">
-                    <div>
-                      <div className="font-semibold">{item.fund}</div>
-                      <div>Fund</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold">0</div>
-                      <div>Supporters</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold">🔗</div>
-                      <div>Share</div>
-                    </div>
-                  </div>
+                {item.urgent && (
+                  <span className="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1">
+                    Urgent
+                  </span>
+                )}
 
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-sm font-medium transition-colors duration-200">
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                  <button className="bg-blue-600 text-white px-6 py-2 text-sm font-medium">
                     Donate
                   </button>
                 </div>
@@ -136,11 +108,12 @@ export default function Rank() {
             ))}
           </div>
 
+          {/* Right Scroll Button */}
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-2 hover:bg-gray-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-400 w-10 h-10 flex items-center justify-center rounded-full"
           >
-            <ChevronRight size={24} />  
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>
