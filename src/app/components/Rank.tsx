@@ -8,8 +8,8 @@ const campaigns = [
   {
     id: 'chest-pain-patient',
     title: 'Help to save life. Chest pain suspecting heart issues.',
-    image: '/images/patient.png',
-    badge: 'Tax Benefit',
+    image: '/images/gdp.jpg',
+    badge: 'Rank 4',
   },
   {
     id: 'food-distribution-vehicle',
