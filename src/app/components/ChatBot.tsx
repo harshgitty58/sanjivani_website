@@ -87,7 +87,7 @@ export default function ChatBot() {
               >
                 {msg.sender === 'bot' && (
                   <Image
-                    src="/images/rahul.png"
+                    src="/images/owner.jpg"
                     alt="Bot"
                     width={50}
                     height={50}

@@ -100,8 +100,8 @@ export default function Rank() {
                 )}
 
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                  <button className="bg-blue-600 text-white px-6 py-2 text-sm font-medium">
-                    Donate
+                  <button className="bg-blue-600 text-white px-1 py-2 text-sm font-medium">
+                    Join Us to Improve
                   </button>
                 </div>
               </div>
