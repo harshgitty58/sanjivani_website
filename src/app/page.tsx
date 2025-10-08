@@ -14,6 +14,7 @@ import ChatBot from '@/app/components/ChatBot';
 import Testimonial from '@/app/components/Testimonial';
 import SDGGrid from '@/app/components/SDGGrid';
 import Rank from '@/app/components/Rank';
+import SocialMenu from '@/app/components/SocialMenu';
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
         <Download />
         <FaqSection />
         <ChatBot />
+        <SocialMenu />
         <Footer />
       </div>
   )
