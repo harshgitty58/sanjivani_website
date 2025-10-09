@@ -223,7 +223,7 @@ export default function OurJourney() {
     <section className="relative w-full min-h-screen bg-[#f2f1f9] text-black font-sans overflow-hidden">
       <div className="absolute inset-0 opacity-5 bg-[url('/images/bg1.jpg')] bg-cover bg-center" />
 
-      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 py-10 sm:py-14 md:py-20 gap-10 md:gap-16">
+      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 md:px-16 py-1 sm:py-1 md:py-1 gap-10 md:gap-16">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
