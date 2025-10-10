@@ -7,35 +7,36 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const campaigns = [
   {
     id: 'chest-pain-patient',
-    title: 'Help to save life. Chest pain suspecting heart issues.',
+    title: '',
     image: '/images/gdp.jpg',
     badge: 'Rank 4',
   },
   {
     id: 'food-distribution-vehicle',
-    title: 'Sanjivani needs vehicle for distributing food across city.',
-    image: '/images/foodcar.png',
-    badge: 'Tax Benefit',
+    title: '',
+    image: '/images/edb.jpg',
+    badge: 'Rank 39th',
   },
   {
     id: 'free-medical-help',
-    title: 'Sanjivani Provides Free Medical Help to Needy People',
-    image: '/images/medicalhelp.png',
-    badge: 'Tax Benefit',
+    title: '',
+    image: '/images/hungerindex.jpg',
+    badge: 'Rank 111th',
     urgent: true,
   },
+  
   {
     id: 'birthday-celebration',
-    title: 'Sanjivani Celebrates Your Birthday',
-    image: '/images/birthday.png',
-    badge: 'Tax Benefit',
+    title: '',
+    image: '/images/happy.jpg',
+    badge: 'Rank 126th',
     urgent: true,
   },
   {
     id: 'village-road',
-    title: 'Sanjivani helps village people build roads in the village.',
-    image: '/images/road.png',
-    badge: 'Tax Benefit',
+    title: '',
+    image: '/images/envx.jpg',
+    badge: 'Rank 176th',
   },
 ];
 
