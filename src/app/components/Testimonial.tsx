@@ -6,7 +6,7 @@ import { Quote } from "lucide-react";
 
 export default function Testimonial() {
   return (
-    <div className="bg-[#f2f1f9] py-6">
+    <div className="bg-[#f2f1f9] py-1">
       <div className="px-4 flex flex-col justify-center">
   
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-indigo-800 mb-6">

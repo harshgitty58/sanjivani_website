@@ -59,7 +59,7 @@ export default function Rank() {
 
   return (
     <div className="flex flex-col bg-[#f2f1f9] mt-0">
-      <div className="px-4 md:px-5 pt-4 pb-6">
+      <div className="px-4 md:px-5 pt-1 pb-6">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
           India in Global Rankings
         </h2>
