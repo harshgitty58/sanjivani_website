@@ -37,12 +37,7 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
 
 
 
-<div className="inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-sm font-bold text-gray-900 shadow-sm">
-    <div className="bg-cyan-400 p-1 rounded-full mr-2 flex items-center justify-center">
-      <BriefcaseMedical className="w-4 h-4 text-white" />
-    </div>
-    Verified Project
-  </div>
+
 
   <div className="inline-flex items-center rounded-full border border-gray-300 bg-white px-3 py-1 text-sm font-bold text-gray-900 shadow-sm">
     <div className="bg-cyan-400 p-1 rounded-full mr-2 flex items-center justify-center">
@@ -80,43 +75,7 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
             </div>
           </div>
 
-          {/* Campaigner + Beneficiary */}
-          <div className="grid md:grid-cols-2 gap-4 mt-8">
-            <div className="bg-white rounded-2xl shadow-xl p-6 flex gap-4 items-start">
-              <div className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full text-gray-700 font-semibold text-sm">AV</div>
-              <div className="flex-1">
-                <div className="flex justify-between items-center">
-                  <h4 className="text-gray-800 font-semibold">Campaigner Details</h4>
-                  {/* <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-green-600 font-medium">VERIFIED ✅</span> */}
-                </div>
-                <hr className="my-2" />
-                <p className="text-gray-800 font-medium">Akshaykumar Vasant Jadhav</p>
-                <p className="flex items-center text-gray-600 text-sm mt-1">
-                  <FaMapMarkerAlt className="mr-1" /> Pune Maharashtra
-                </p>
-                <p className="flex items-center text-green-700 text-sm mt-1 cursor-pointer hover:underline">
-                  📧 Contact
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-6 flex gap-4 items-start">
-              <div className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full text-gray-700 font-semibold text-sm">VT</div>
-              <div className="flex-1">
-                <div className="flex justify-between items-center">
-                  <h4 className="text-gray-800 font-semibold">Beneficiary Details</h4>
-                  {/* <span className="text-xs bg-gray-100 px-2 py-0.5 rounded-full text-green-600 font-medium">VERIFIED ✅</span> */}
-                </div>
-                <hr className="my-2" />
-                <p className="text-gray-800 text-sm">Vasant Tukaram Jadhav</p>
-                <p className="text-gray-600 text-sm">Parent of Akshaykumar Vasant Jadhav</p>
-                <p className="text-gray-600 text-sm">
-                  Patient Hospitalised at <br />
-                  <span className="font-semibold text-black">Ruby Hall Clinic - Sassoon Road, Pune</span>
-                </p>
-              </div>
-            </div>
-          </div>
+         
         </div>
 
         {/* RIGHT: Donation Info */}
