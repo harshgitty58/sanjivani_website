@@ -8,6 +8,7 @@ export interface RegisterVendorReq {
     password:string;
 }
 
+
 export const registerVendor = async (vendor: RegisterVendorReq):Promise<string> =>{
     const resp = await baseApi.post<string>('/vendor/register',vendor);
     return resp.data;
