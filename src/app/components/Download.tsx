@@ -33,8 +33,8 @@ export default function Download() {
         </div>
 
         <p className="text-gray-700 mb-6 text-sm sm:text-base md:text-lg">
-          Use code <span className="font-semibold text-black">MUM07251</span> and get{' '}
-          <span className="font-bold text-black">FLAT 10% OFF</span> on your travel booking
+          <span className="font-semibold text-black">To Engage in current projects and support the needy</span> {' '}
+          <span className="font-bold text-black"></span>
         </p>
 
         <div className="flex w-full max-w-md border rounded-lg overflow-hidden shadow-sm">

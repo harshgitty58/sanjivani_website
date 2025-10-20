@@ -20,7 +20,7 @@ const ContactSection = () => {
             </span>
           </div>
           <p className="mt-6 text-lg text-white max-w-md">
-            Our NGO support team is available to engage you in current projects.
+            Call NGO to engage you in current projects.
           </p>
         </div>
 
