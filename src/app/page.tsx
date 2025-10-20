@@ -7,6 +7,7 @@ import VideoTravelBlogs from '@/app/components/VideoTravelBlogs';
 import EmergencyART from '@/app/components/Emergency-ART';
 import ContactSection from '@/app/components/ContactSection';
 import Explore from '@/app/components/Explore';
+import Businesspartner from '@/app/components/businesspartner';
 import Appbar from "./components/screens/Appbar";
 import Categories from "./components/screens/Categories";
 import Donation from '@/app/components/Donation';
@@ -36,6 +37,7 @@ export default function Home() {
         <Portfo />
         <Donation />
         <VideoTravelBlogs />
+        <Businesspartner />
         {/* <Vehicle />     */}
         {/* <Popular /> */}
         <EmergencyART />
