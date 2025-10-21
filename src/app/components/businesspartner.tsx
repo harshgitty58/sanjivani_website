@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
     
 const countries = [
+  { name: 'waterproofing', image: '/images/Vehicle/water.png' },
   { name: 'Cab Vendor', image: '/images/Vehicle/cab-vendor.png' },
   { name: 'Bus Vendor', image: '/images/Vehicle/bus-vendor.png' },
   { name: 'Train Vendor', image: '/images/Vehicle/train-vendor.png' },
