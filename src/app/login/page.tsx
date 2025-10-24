@@ -91,13 +91,13 @@ export default function Login() {
                         <Link className='justify-center flex' href="/">
                             <img src="images/sanjivani-logo.png" className='w-[70%] h-auto' alt="Sanjivani Logo" />
                         </Link>
-                        <h1 className='text-gray-600 font-bold text-xl uppercase' >Sanjivani ERP</h1>
+                        
                     </div>
 
                     {formType === "login" && (
                         <>
-                            <FormInput label="Phone" icon='phone' type="tel" placeholder='Enter Mobile Number' value={authData.mobileNumber} onChange={(value) => handleDataChange('mobileNumber', value)} />
-                            <FormInput label="Password" icon='password' type="password" placeholder='Enter Password' value={authData.password} onChange={(value) => handleDataChange('password', value)} />
+                            <FormInput label="" icon='phone' type="tel" placeholder='Enter Mobile Number' value={authData.mobileNumber} onChange={(value) => handleDataChange('mobileNumber', value)} />
+                            <FormInput label="" icon='password' type="password" placeholder='Enter Password' value={authData.password} onChange={(value) => handleDataChange('password', value)} />
                         </>
                     )}
 
