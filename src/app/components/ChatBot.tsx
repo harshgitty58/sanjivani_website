@@ -16,7 +16,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState([
     {
       sender: 'bot',
-      text: 'Hi - I am here to help answer any questions you have or direct you to the resources you are looking for. How can I assist you?',
+      text: 'Hi - How can I assist you?',
     },
   ]);
   const [input, setInput] = useState('');
