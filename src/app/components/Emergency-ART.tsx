@@ -36,7 +36,7 @@ const ContactSection = () => {
                 className="w-full placeholder-white border-2 border-white px-4 py-2 rounded outline-none focus:ring-2 focus:ring-purple-600 bg-transparent"
                 required
               />
-              <p className="text-red-400 text-sm mt-1">required</p>
+              
             </div>
             <div>
               <input
