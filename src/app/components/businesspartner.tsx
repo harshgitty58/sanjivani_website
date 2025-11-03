@@ -17,7 +17,7 @@ const countries = [
 
 ];
 
-const businesspartner = () => {
+const Businesspartner = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
@@ -76,4 +76,4 @@ const businesspartner = () => {
   );
 };
 
-export default businesspartner;
+export default Businesspartner;

@@ -45,7 +45,7 @@ const JoinPage = () => {
             BJP is devoutly committed to building a strong and developed India which is unimaginable without
             the trust and the unflinching support of the people of India. Join us and be part of the
             unprecedented transformation that is changing the lives of all sections of society for better.
-            Together, let's build <span className="text-orange-400 font-medium">‘Ek Bharat, Shreshtha Bharat’</span> and witness the rise of New India under the
+            Together let's build <span className="text-orange-400 font-medium">‘Ek Bharat, Shreshtha Bharat’</span> and witness the rise of New India under the
             charismatic leadership of Adv. Rahul Chavan.
           </p>
 

@@ -1,6 +1,7 @@
 import { AxiosResponse } from "axios";
 import baseApi from "../baseApi";
-import { Driver } from "@/interfaces/apiInterfaces";
+// import { Driver } from "@/interfaces/apiInterfaces";
+export type Driver = any;
 
 export type BookBusData = {
   from: string;       

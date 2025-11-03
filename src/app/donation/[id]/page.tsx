@@ -6,7 +6,7 @@ import DonationCampaign from '@/app/urgent/DonationCampaign';
 import DonationStoryPage from '@/app/urgent/DonationStoryPage';
 import DocumentsGallery from '@/app/urgent/DocumentsGallery';
 import CommentBox from '@/app/urgent/CommentBox';
-import DonationPopup from '@/app/urgent/DonationPopup';
+// import DonationPopup from '@/app/urgent/DonationPopup';
 // import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
 import Banner from '@/app/urgent/Banner';
@@ -39,7 +39,7 @@ export default function CampaignPage() {
       <br />
     </div>
     <Footer />
-    <DonationPopup id={id as string} />
+    {/* <DonationPopup id={id as string} /> */}
   </>
   );
 }

@@ -73,7 +73,7 @@ export default function ChatBot() {
       {open && (
         <div className="fixed bottom-24 right-6 w-80 bg-white shadow-xl rounded-2xl overflow-hidden z-50 animate-slide-up">
           <div className="flex justify-between items-center px-4 py-2 bg-gray-100 border-b">
-            <span className="font-semibold text-sm">Hi, I'm Sanjvani!</span>
+            <span className="font-semibold text-sm"><p>It&apos;s a chatbot</p></span>
             <button onClick={toggleChat} className="text-gray-600">✕</button>
           </div>
 

@@ -48,7 +48,7 @@ export default function Testimonial() {
             <div className="ml-10">
               <h3 className="text-xl font-bold text-gray-900 mb-1">Rahul</h3>
               <p className="text-base text-gray-700 italic mb-1 leading-snug">
-                "Thanks for helping us. The support and service were beyond what I expected!"
+                "Thanks for helping us The support and service were beyond what I expected"
               </p>
               <p className="text-xs text-gray-500">— Volunteer from Maharashtra</p>
             </div>

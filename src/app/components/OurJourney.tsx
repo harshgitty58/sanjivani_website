@@ -201,7 +201,7 @@ const timelineData = [
 export default function OurJourney() {
   const [activeIndex, setActiveIndex] = useState(0);
   const current = timelineData[activeIndex];
-  const yearRefs = useRef<(HTMLButtonElement | null)[]>([]); // refs for year buttons
+  const yearRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const goPrev = () =>
     setActiveIndex((prev) => (prev > 0 ? prev - 1 : timelineData.length - 1));
@@ -294,7 +294,9 @@ export default function OurJourney() {
           {timelineData.map((item, index) => (
             <button
               key={index}
-              ref={(el) => (yearRefs.current[index] = el)}
+              ref={(el) => {
+              yearRefs.current[index] = el;
+              }}
               onClick={() => setActiveIndex(index)}
               title={item.subtitle}
               className={`px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm rounded-full border font-medium transition whitespace-nowrap ${

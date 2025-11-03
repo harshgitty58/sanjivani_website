@@ -16,7 +16,6 @@ interface Props {
 export default function DonationCampaign({ id, title, image, fund }: Props) {
   return (
     <div className=" relative max-w-6xl mx-auto p-4 min-h-screen">
-      {/* SHARE BADGE */}
       <div className="fixed right-4 top-[40%] z-50 text-center">
         <div className="text-black text-sm font-semibold mb-1">11</div>
         <div className="w-10 h-10 rounded-full bg-[#1d2c5e] flex items-center justify-center shadow-md mx-auto">
@@ -53,7 +52,6 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
 
 
       <div className="grid md:grid-cols-2 gap-8 mt-6">
-        {/* LEFT: Image and Tags */}
         <div className="space-y-4">
           <div className="bg-pink-100">
             <div className="flex justify-between items-center">
@@ -175,18 +173,16 @@ export default function DonationCampaign({ id, title, image, fund }: Props) {
 
     
       <div className="flex flex-col md:flex-row gap-6 w-full max-w-6xl p-4">
-        {/* Latest Update */}
         <div className="bg-white rounded-2xl shadow-xl p-6 flex-1">
           <h2 className="text-2xl font-semibold mb-4">Latest Update</h2>
           <p className="text-gray-800 mb-6">
-            Dear Donors, This serves as an update on the utilization of funds. The funds collected through this campaign will be transferred to the family's personal account, covering the expenses they have cleared for the individual's treatment. If you have any concerns regarding this process, please don't hesitate to contact us. Your unwavering support for this fundraiser is truly appreciated!
+            Dear Donors This serves as an update on the utilization of funds. The funds collected through this campaign will be transferred to the family's personal account, covering the expenses they have cleared for the individual's treatment. If you have any concerns regarding this process, please don't hesitate to contact us. Your unwavering support for this fundraiser is truly appreciated!
           </p>
           <button className="border-2 border-teal-600 text-teal-600 px-6 py-2 rounded-full hover:bg-teal-50 transition">
             Read More
           </button>
         </div>
 
-        {/* Top Influencers */}
         <div className="bg-white rounded-2xl shadow-md p-6 w-full md:w-96 flex flex-col justify-between">
           <div>
             <h2 className="text-2xl font-semibold mb-4">Top Influencers</h2>
