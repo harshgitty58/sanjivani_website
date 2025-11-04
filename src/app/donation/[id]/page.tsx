@@ -33,12 +33,12 @@ export default function CampaignPage() {
         fund={campaign.fund}
       />
       <br />
-      <DonationStoryPage />
+      {/* <DonationStoryPage /> */}
       <DocumentsGallery campaignId={campaign.id} />
-      <CommentBox />
+      {/* <CommentBox /> */}
       <br />
     </div>
-    <Footer />
+    {/* <Footer /> */}
     {/* <DonationPopup id={id as string} /> */}
   </>
   );

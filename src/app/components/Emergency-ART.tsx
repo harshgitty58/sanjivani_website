@@ -8,10 +8,10 @@ const ContactSection = () => {
       className="bg-center bg-fixed text-white flex items-center justify-center px-4 sm:px-6 md:px-10"
       style={{
         backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/images/placetovisit2.jpg')",
+          "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/images/placetovisit1.jpg')",
       }}
     >
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 py-1 items-center">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-0 py-1 items-center">
         
         <div className="lg:col-span-3 pl-16">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -19,11 +19,11 @@ const ContactSection = () => {
           </h1>
           <div className="inline-block bg-white px-3 sm:px-4 py-2 rounded-md">
             <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-800">
-              Quick Response Team
+              Accident Response Team
             </span>
           </div>
           <p className="mt-6 text-base sm:text-lg lg:text-xl text-white max-w-lg">
-            24 X 7 Emergency Quick Response Team
+            24 X 7 Emergency Response Team available to help
           </p>
         </div>
 
@@ -36,8 +36,7 @@ const ContactSection = () => {
                 className="w-full placeholder-white border-2 border-white px-4 py-2 rounded outline-none focus:ring-2 focus:ring-purple-600 bg-transparent"
                 required
               />
-              
-            </div>
+          </div>
             <div>
               <input
                 type="text"
