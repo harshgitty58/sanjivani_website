@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 
@@ -39,20 +39,31 @@ const faqData = [
   },
 ];
 
-const FaqItem = ({
-  item,
-  index,
-  isOpen,
-  toggle,
-}: {    
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768); // Tailwind md breakpoint
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  return isMobile;
+}
+
+type FaqItemProps = {
   item: { question: string; answer: string };
   index: number;
   isOpen: boolean;
   toggle: () => void;
-}) => {
-  return (
+};
 
-    <div className="break-inside-avoid mb-6 bg-white border border-gray-200 rounded-2xl shadow hover:shadow-lg transition duration-300">
+const FaqItem = memo(({ item, index, isOpen, toggle }: FaqItemProps) => {
+  return (
+    <motion.div 
+      layout 
+      initial={false}
+      className="mb-6 bg-white border border-gray-200 rounded-2xl shadow hover:shadow-lg transition duration-300"
+    >
       <button
         onClick={toggle}
         aria-expanded={isOpen}
@@ -80,26 +91,28 @@ const FaqItem = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
-
+    </motion.div>
   );
-};
+});
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index));
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
-                                                               
+
+  const faqsToShow = isMobile ? faqData.slice(0, 3) : faqData;
+
   return (
-    <section className="bg-[#f2f1f9] pt-2 pb-4 px-6 md:px-24">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-12">
+    <section className="bg-[#f2f1f9] pt-0 pb-2 px-5 md:px-10">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center text-indigo-800 mb-6">
         Frequently Asked Questions (FAQ’s)
       </h2>
 
-      <div className="columns-1 md:columns-2 gap-6">
-        {faqData.map((item, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-3">
+        {faqsToShow.map((item, index) => (
           <FaqItem
             key={index}
             item={item}
@@ -110,7 +123,6 @@ const FaqSection = () => {
         ))}
       </div>
     </section>
-  
   );
 };
 
