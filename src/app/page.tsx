@@ -24,14 +24,13 @@ export default function Home() {
   return (
       <div className="relative z-10 pt-11">
         <Appbar />
-        <div className="w-full h-[600px] my-8">
+        <div className="w-full h-[600px]">
           <iframe
             src="/ngo-banner-next/assets/menu-below-slider.html"
             title="NGO Banner Next"
             className="w-full h-full border-0"
           />   
         </div>
-        {/* <Categories /> */}
         <OurJourney />
         <Rank />
         <Portfo />

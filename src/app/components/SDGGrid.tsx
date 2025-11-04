@@ -28,7 +28,7 @@ const goals = [
 export default function SDGGrid() {
   return (
     <div className="bg-[#f2f1f9] py-0 px-0 md:px-0">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-0 pt-1 pb-1">
         {goals.map((goal) => (
           <div 
             key={goal.id}
