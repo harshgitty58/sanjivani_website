@@ -8,7 +8,7 @@ export default function Testimonial() {
   return (
     <div className="bg-[#f2f1f9] py-0 px-4">
       <div className="max-w-6xl mx-auto flex flex-col justify-center items-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-8 mt-4">
           What people say about us
         </h2>
 

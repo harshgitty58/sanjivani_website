@@ -57,7 +57,7 @@ const Explore = () => {
 
   return (
     <section className="py-1 bg-[#f2f1f9]">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8 mt-4">
         Corporate CSR Partners
       </h2>
 

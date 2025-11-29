@@ -43,7 +43,7 @@ export default function Home() {
         <SDGGrid />
         <ContactSection />
         <Explore />
-        <Testimonial />
+        <Testimonial />   
         <Reviews />
         <FaqSection />
         <Download />

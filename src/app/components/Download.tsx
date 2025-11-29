@@ -10,7 +10,7 @@ export default function Download() {
 
   const handleSubmit = () => {
     if (mobile) {
-      alert(`App link sent to: +91 ${mobile}`);
+      alert(`App link sent to: +91 ${mobile}`);   
     } else {
       alert('Please enter your mobile number');
     }
