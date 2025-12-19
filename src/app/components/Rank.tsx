@@ -53,15 +53,12 @@ export default function Rank() {
     <section className="bg-[#f2f1f9] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-        {/* Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-indigo-800 mb-8">
           India in Global Rankings
         </h2>
 
-        {/* Carousel */}
         <div className="relative">
 
-          {/* Left Button (hidden on mobile) */}
           <button
             onClick={() => scroll('left')}
             className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10
@@ -70,7 +67,6 @@ export default function Rank() {
             <ChevronLeft size={20} />
           </button>
 
-          {/* Cards */}
           <div
             ref={scrollRef}
             className="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth
@@ -91,13 +87,11 @@ export default function Rank() {
                   className="object-cover"
                 />
 
-                {/* Rank Badge */}
                 <span className="absolute top-2 left-2 bg-yellow-500
                                  text-white text-xs font-semibold px-2 py-1 rounded">
                   {item.badge}
                 </span>
 
-                {/* Urgent Badge */}
                 {item.urgent && (
                   <span className="absolute top-2 right-2 bg-red-600
                                    text-white text-xs font-semibold px-2 py-1 rounded">
@@ -105,7 +99,6 @@ export default function Rank() {
                   </span>
                 )}
 
-                {/* CTA */}
                 <div className="absolute bottom-3 inset-x-0 flex justify-center">
                   <button className="bg-blue-600 hover:bg-blue-700
                                      text-white text-xs sm:text-sm
@@ -117,7 +110,6 @@ export default function Rank() {
             ))}
           </div>
 
-          {/* Right Button (hidden on mobile) */}
           <button
             onClick={() => scroll('right')}
             className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10
