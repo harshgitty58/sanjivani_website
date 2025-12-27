@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const timelineData = [
-  {
+  {          
     year: '2007',
     title: 'OUR JOURNEY',
     subtitle: 'We Started NGO',
