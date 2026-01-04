@@ -11,9 +11,9 @@ const timelineData = [
     title: 'OUR JOURNEY',
     subtitle: 'We Started NGO',
     description:
-      'After surving for 26 years in Indian Army, Shri Babu Chavan retired from Army and formed Sanjivani NGO in Pune.',
+      'After surving for 26 years in Indian Army, Shri Babu Torambe retired from Army and formed Sanjivani NGO in Pune.',
     image: '/images/babu.jpeg',
-    person: 'Shri. Babu Chavan',
+    person: 'Shri. Babu Torambe',
     designation: 'Founder of Sanjivani NGO',
   },
   {
@@ -23,7 +23,7 @@ const timelineData = [
     description:
       'Looking at the number of people connecting with ngo Rahul started helping father in running the daily operations.',
     image: '/images/rahul1.png',
-    person: 'Adv. Rahul Chavan',
+    person: 'Adv. Rahul Torambe',
     designation: 'President of Sanjivani NGO',
   },
   {
@@ -329,9 +329,9 @@ export default function OurJourney() {
 //     title: 'OUR JOURNEY',
 //     subtitle: 'We Started NGO',
 //     description:
-//       'After surving for 26 years in Indian Army, Shri Babu Chavan retired from Army and formed Sanjivani NGO in Pune.',
+//       'After surving for 26 years in Indian Army, Shri Babu Torambe retired from Army and formed Sanjivani NGO in Pune.',
 //     image: '/images/babu.jpeg',
-//     person: 'Shri. Babu Chavan',
+//     person: 'Shri. Babu Torambe',
 //     designation: 'Founder of Sanjivani NGO',
 //   },
 //   {
@@ -341,7 +341,7 @@ export default function OurJourney() {
 //     description:
 //       'Looking at the number of people connecting with ngo Rahul started helping father in running the daily operations.',
 //     image: '/images/rahul1.png',
-//     person: 'Adv. Rahul Chavan',
+//     person: 'Adv. Rahul Torambe',
 //     designation: 'President of Sanjivani NGO',
 //   },
 //   {

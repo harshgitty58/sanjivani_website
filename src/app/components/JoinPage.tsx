@@ -46,7 +46,7 @@ const JoinPage = () => {
             the trust and the unflinching support of the people of India. Join us and be part of the
             unprecedented transformation that is changing the lives of all sections of society for better.
             Together let's build <span className="text-orange-400 font-medium">‘Ek Bharat, Shreshtha Bharat’</span> and witness the rise of New India under the
-            charismatic leadership of Adv. Rahul Chavan.
+            charismatic leadership of Adv. Rahul Torambe.
           </p>
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4">
