@@ -36,19 +36,21 @@ export default function IconSection() {
 
   const IconsData: IconData[] = [
     
-    { title: 'Surgery', iconPath: <FaBriefcaseMedical fontSize={25} /> },
+    { title: 'Home', iconPath: <FaPersonMilitaryRifle  fontSize={25}/> },
+    { title: 'District', iconPath: <MdBabyChangingStation  fontSize={25}/>},
+    { title: 'Air', iconPath: <FaPlaneUp  fontSize={25}/>},
+    { title: 'water', iconPath: <GiShipBow  fontSize={25}/> },
+    { title: 'Food', iconPath:<PiPlantLight  fontSize={25}/> },
+    { title: 'Cloths', iconPath: <GiBroom  fontSize={25}/>},
+    { title: 'Shelter', iconPath: <PiStudentBold  fontSize={25}/>},
+    { title: 'Solar', iconPath: <MdOutlineSolarPower  fontSize={25}/> },
+    { title: 'Education', iconPath: <GiTeacher  fontSize={25}/> },
+    { title: 'Work', iconPath: <FaLaptopCode  fontSize={25}/> },
+    { title: 'Medical', iconPath: <FaBriefcaseMedical fontSize={25} /> },
     { title: 'Legal', iconPath: <GoLaw  fontSize={25}/> },
     { title: 'Voting', iconPath: <GiVote  fontSize={25}/>},
-    { title: 'Training', iconPath: <GiTeacher  fontSize={25}/> },
-    { title: 'Scholarships', iconPath: <PiStudentBold  fontSize={25}/>},
-    { title: 'Farm', iconPath:<PiPlantLight  fontSize={25}/> },
-    { title: 'Cleaning', iconPath: <GiBroom  fontSize={25}/>},
-    { title: 'Mom', iconPath: <MdBabyChangingStation  fontSize={25}/>},
-    { title: 'Solar', iconPath: <MdOutlineSolarPower  fontSize={25}/> },
-    { title: 'Computer', iconPath: <FaLaptopCode  fontSize={25}/> },
-    { title: 'Army', iconPath: <FaPersonMilitaryRifle  fontSize={25}/> },
-    { title: 'Navy', iconPath: <GiShipBow  fontSize={25}/> },
-    { title: 'Airforce', iconPath: <FaPlaneUp  fontSize={25}/>},
+    
+    
     
 
   ];
