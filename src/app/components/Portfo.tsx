@@ -11,15 +11,6 @@ const cardData = [
   { title: 'Electricity & Power', image: '/images/banner/b5.jpg', buttonText: 'PROJECTS' },
   { title: 'Food & Hunger', image: '/images/food1.jpg', buttonText: 'PROJECTS' },
   { title: 'Infrastructure', image: '/images/infrastr.jpeg', buttonText: 'READ MORE' },
- // { title: 'Women Empowerment', image: '/images/rahul1.png', buttonText: 'PROJECTS' },
- // { title: 'Farmers', image: '/images/rahul1.png', buttonText: 'PROJECTS' },
-  //{ title: 'Medical Help', image: '/images/rahul1.png', buttonText: 'PROJECTS' },
- // { title: 'Water', image: '/images/rahul1.png', buttonText: 'PROJECTS' },
- // { title: 'Transportation', image: '/images/rahul1.png', buttonText: 'READ MORE' },
- // { title: 'HUMAN RIGHTS', image: '/images/rahul1.png', buttonText: 'READ MORE' },
- // { title: 'Wildlife', image: '/images/rahul1.png', buttonText: 'READ MORE' },
- // { title: 'Entrepreneurship', image: '/images/rahul1.png', buttonText: 'READ MORE' },
- // { title: 'Disaster Relief', image: '/images/rahul1.png', buttonText: 'READ MORE' },
 ];
 
 export default function Portfo() {
@@ -37,7 +28,7 @@ export default function Portfo() {
   };
 
   return (
-    <section className="relative w-full bg-[#f2f1f9]">
+    <section className="relative w-full bg-[#f2f1f9] py-16 md:py-24">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
         Our Portfolios
       </h2>

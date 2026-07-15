@@ -1,91 +1,129 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import React, { useState } from 'react';
+import { X } from 'lucide-react';
 
-interface PopupData {
-  title: string;
-  messageLine1: string;
-  name: string;
-  amount: number;
-  images: string[];
+interface DonationPopupProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onDonate?: (amount: number, isMonthly: boolean) => void;
 }
 
-export default function DonationPopup() {
-  const params = useParams();
-  const id = params?.id as string;
+export default function DonationPopup({ isOpen, onClose, onDonate }: DonationPopupProps) {
+  const [donationTab, setDonationTab] = useState<'once' | 'monthly'>('once');
+  const [selectedAmount, setSelectedAmount] = useState(9999);
+  const [customAmount, setCustomAmount] = useState('9999');
 
-  const [popupData, setPopupData] = useState<PopupData | null>(null);
-  const [showPopup, setShowPopup] = useState(false);
+  if (!isOpen) return null;
 
-  useEffect(() => {
-    if (!id) return;
-
-    const fetchData = async () => {
-      try {
-        const res = await fetch(`/api/popup/${id}`);
-        if (!res.ok) {
-          console.error('Failed to fetch popup:', res.status);
-          return;
-        }
-        const data = await res.json();
-        setPopupData(data);
-        setTimeout(() => setShowPopup(true), 10000); // show after 10s
-      } catch (error) {
-        console.error('Error fetching popup:', error);
-      }
-    };
-
-    fetchData();
-  }, [id]);
-
-  if (!popupData || !showPopup) return null;
+  const handleDonate = () => {
+    const amount = parseInt(customAmount) || selectedAmount;
+    onDonate?.(amount, donationTab === 'monthly');
+  };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 p-4 sm:p-6 overflow-y-auto">
-      <div className="bg-white rounded-xl shadow-2xl w-full max-w-md sm:max-w-lg lg:max-w-xl text-center relative p-5 sm:p-8">
-        {/* Close Button */}
-        <button
-          onClick={() => setShowPopup(false)}
-          className="absolute top-3 right-4 text-xl font-bold text-gray-600 hover:text-red-500"
-          aria-label="Close popup"
-        >
-          ×
-        </button>
+    <>
+      {/* Backdrop */}
+      <div
+        onClick={onClose}
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+      />
 
-        {/* Images */}
-        {popupData.images?.length > 0 && (
-          <div className="flex flex-wrap justify-center gap-2 mb-4">
-            {popupData.images.map((src, i) => (
-              <Image
-                key={i}
-                src={src}
-                alt={`popup-img-${i}`}
-                width={80}
-                height={80}
-                className="rounded-md object-cover"
+      {/* Modal - Desktop: centered, Mobile: bottom sheet */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 flex max-h-[85vh] w-full max-w-md flex-col overflow-y-auto rounded-t-2xl bg-white shadow-2xl animate-in fade-in zoom-in-95 duration-200 lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 lg:rounded-2xl">
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+          <h3 className="text-[17px] font-bold text-gray-900 m-0">
+            Transaction Details
+          </h3>
+          <button
+            onClick={onClose}
+            aria-label="Close donation popup"
+            title="Close donation popup"
+            className="bg-none border-none text-xl text-gray-500 cursor-pointer p-1 hover:text-gray-700"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="p-5">
+          {/* Once / Monthly Toggle */}
+          <div className="flex items-center justify-center mb-4">
+            <div
+              onClick={() => setDonationTab(donationTab === 'monthly' ? 'once' : 'monthly')}
+              className="relative flex h-8 w-[90px] cursor-pointer items-center justify-center rounded-[16px] bg-[#E87B35] p-1 shadow-[inset_0_1px_3px_rgba(0,0,0,0.15)] select-none transition-colors"
+            >
+              {/* Sliding knob */}
+              <div
+                className={`absolute z-10 h-6 w-6 rounded-full bg-white shadow-md transition-all ${donationTab === 'monthly' ? 'translate-x-14' : 'translate-x-0'}`}
               />
+              {/* Text */}
+              <span
+                className="text-xs font-semibold text-white relative z-0"
+              >
+                {donationTab === 'monthly' ? 'Monthly' : 'Once'}
+              </span>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="h-px bg-gray-200 my-3" />
+
+          {/* Amount Selection */}
+          <p className="font-bold text-sm text-gray-900 mb-3">
+            CHOOSE AMOUNT
+          </p>
+          <div className="flex gap-2 mb-3 flex-wrap">
+            {[1800, 4000, 7500, 9999].map((amt) => (
+              <button
+                key={amt}
+                onClick={() => {
+                  setSelectedAmount(amt);
+                  setCustomAmount(amt.toString());
+                }}
+                className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition-all ${selectedAmount === amt ? 'border-2 border-[#16836A] bg-[#16836A] text-white' : 'border border-slate-200 bg-white text-slate-700'}`}
+              >
+                ₹{amt.toLocaleString('en-IN')}
+              </button>
             ))}
           </div>
-        )}
 
-        
-        <p className="text-gray-700 text-sm mb-1">{popupData.title}</p>
-        <p className="text-lg font-semibold text-gray-900">{popupData.messageLine1}</p>
-        <p className="text-2xl font-bold text-black mt-1">{popupData.name}</p>
+          {/* Custom Amount Input */}
+          <div className="flex gap-2 mb-6">
+            <div className="border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm text-gray-500 font-semibold">
+              ₹ INR
+            </div>
+            <input
+              type="number"
+              aria-label="Custom donation amount"
+              placeholder="Enter amount"
+              value={customAmount}
+              onChange={(e) => {
+                setCustomAmount(e.target.value);
+                setSelectedAmount(parseInt(e.target.value) || 0);
+              }}
+              className="flex-1 border border-gray-200 rounded-lg px-3.5 py-2.5 text-sm outline-none focus:border-[#E87B35] transition-colors"
+            />
+          </div>
 
-        
-        <button className="mt-5 bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full w-full sm:w-auto">
-          Donate ₹{popupData.amount}
-        </button>
+          {/* Donate Button */}
+          <button
+            onClick={handleDonate}
+            className="w-full bg-[#E87B35] hover:bg-[#D96B26] text-white font-bold py-3.5 rounded-xl transition-all shadow-lg"
+          >
+            DONATE
+          </button>
 
-        <p className="mt-3 text-sm text-gray-500">OR</p>
-
-        <button className="mt-1 text-green-600 underline font-medium hover:text-green-700">
-          Choose a different amount
-        </button>
+          {/* Terms */}
+          <p className="text-xs text-gray-400 mt-4 text-center leading-relaxed">
+            By proceeding, you are agreeing to Sanjivani's{' '}
+            <span className="text-[#16836A] font-semibold">Terms of Use</span>,{' '}
+            <span className="text-[#16836A] font-semibold">Privacy Policy</span>, and{' '}
+            <span className="text-[#16836A] font-semibold">Cookie Policy</span>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -5,16 +5,16 @@ import React from 'react';
 const ContactSection = () => {
   return (
     <section
-      className="bg-center bg-fixed text-white flex items-center justify-center px-4 sm:px-6 md:px-10"
+      className="bg-cover bg-center text-white flex items-center justify-center px-4 sm:px-6 md:px-10 py-16 md:py-24"
       style={{
         backgroundImage:
           "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('/images/placetovisit1.jpg')",
       }}
     >
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-0 py-1 items-center">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-0 items-center">
         
-        <div className="lg:col-span-3 pl-16">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        <div className="lg:col-span-3 lg:pl-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center lg:text-left">
             Emergency
           </h1>
           <div className="inline-block bg-white px-3 sm:px-4 py-2 rounded-md">
@@ -22,7 +22,7 @@ const ContactSection = () => {
               Accident Response Team
             </span>
           </div>
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-white max-w-lg">
+          <p className="mt-6 text-base sm:text-lg lg:text-xl text-white max-w-lg text-center lg:text-left">
             24 X 7 Emergency Response Team available to help
           </p>
         </div>
