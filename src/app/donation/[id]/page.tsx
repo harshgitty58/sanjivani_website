@@ -130,7 +130,7 @@ function TransactionPopup({
               className="flex-1 rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm outline-none transition focus:border-[#E87B35]"
             />
           </div>
-          <button onClick={handleDonate} className="w-full rounded-xl bg-[#E87B35] py-4 text-base font-extrabold text-white shadow-lg transition-all hover:bg-[#D96B26] active:scale-[0.98]">
+          <button onClick={handleDonate} className="w-full rounded-full bg-[#E87B35] py-4 text-base font-extrabold text-white shadow-lg transition-all hover:bg-[#D96B26] active:scale-[0.98]">
             DONATE &#8377;{(parseInt(customAmount) || selectedAmount).toLocaleString('en-IN')}
           </button>
           <p className="mt-4 text-center text-[11px] leading-relaxed text-slate-400">
@@ -201,10 +201,10 @@ function PaymentSimulatorModal({ amount, onComplete }: { amount: number; onCompl
    ============================================== */
 function FloatingDonateBar({ onDonateClick }: { title: string; onDonateClick: () => void }) {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:bottom-6 md:right-6 md:left-auto md:translate-x-0 z-50">
       <button
         onClick={onDonateClick}
-        className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] px-6 py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100"
+        className="relative overflow-hidden rounded-full bg-gradient-to-r from-[#FF7A00] via-[#E87B35] to-[#FF9E46] px-16 md:px-6 py-3 text-center text-sm font-black tracking-wider text-white shadow-[0_4px_20px_rgba(232,123,53,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_6px_25px_rgba(232,123,53,0.7)] active:scale-95 opacity-100"
       >
         <span className="absolute inset-0 block w-full h-full bg-gradient-to-r from-transparent via-white/45 to-transparent -translate-x-full animate-[shimmer_2s_infinite]" />
         DONATE
@@ -414,6 +414,7 @@ export default function CampaignPage() {
   const [showPayment, setShowPayment] = useState(false);
   const [donationAmount, setDonationAmount] = useState(0);
   const [campaignState, setCampaignState] = useState<Campaign | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const id = typeof params?.id === 'string' ? params.id : Array.isArray(params?.id) ? params.id[0] : '';
   const baseCampaign = campaignsData.find((c) => c.id === id);
@@ -584,7 +585,7 @@ export default function CampaignPage() {
                 <span className="flex items-center gap-1"><Users size={14} /> {campaign.supporters} Supporters</span>
                 <span className="flex items-center gap-1"><Clock size={14} /> {campaign.daysLeft} Days Left</span>
               </div>
-              <button onClick={openDonation} className="mt-4 w-full rounded-xl bg-[#E87B35] py-3.5 text-center font-extrabold text-white shadow-lg transition hover:bg-[#D96B26] active:scale-[0.98]">
+              <button onClick={openDonation} className="mt-4 w-full rounded-full bg-[#E87B35] py-3.5 text-center font-extrabold text-white shadow-lg transition hover:bg-[#D96B26] active:scale-[0.98]">
                 DONATE NOW
                 <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
               </button>
@@ -664,6 +665,58 @@ export default function CampaignPage() {
               </div>
             </div>
 
+            {/* 7. Declaration Section */}
+            <div className="rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm sm:p-6 mt-5">
+              <div className={`relative overflow-hidden transition-all duration-500 ${isExpanded ? 'max-h-max' : 'max-h-[220px]'}`}>
+                <div className="space-y-4 text-xs sm:text-[13px] text-slate-500 italic leading-relaxed">
+                  <div>
+                    <h4 className="font-bold text-slate-700 uppercase not-italic mb-1">NO INFLUENCE DECLARATION</h4>
+                    <p>
+                      Sanjivani does not influence / control the decision of the campaigner / patient with respect to choice of hospital / doctor / healthcare treatment or the cost / estimate of any such treatment. Such decision is in entirety of campaigner / patient / beneficiary and / or their family members without any interference and / or say of Sanjivani. Sanjivani is absolved of any liability in respect thereof.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-700 uppercase not-italic mb-1">LANGUAGE OF STORY/STATEMENT DECLARATION</h4>
+                    <p>
+                      The language, story, facts mentioned on this fundraising page is in entirety statements / opinions / thoughts shared by the campaigner / beneficiary or persons authorised on their behalf and shall not be construed as statement / thoughts / opinions of or on behalf of Sanjivani.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-700 uppercase not-italic mb-1">TREATMENT COST ESTIMATES</h4>
+                    <p>
+                      Sanjivani has no control over the cost estimates provided by hospitals / clinics / pharmaceutical companies etc. The cost estimates vary depending on the city and / or hospital where the patient is under treatment, professional fees of the treating doctors, drugs / medicines / therapies chosen for treatment by patient or patient’s family at their own discretion including but not limited to unique medical conditions / circumstances pertaining to each patient.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-700 uppercase not-italic mb-1">UTILIZATION OF FUNDS</h4>
+                    <p>
+                      In the rare scenario of surplus funds remaining within the fundraising campaign due to any of the following circumstances: i) Completion of the Patient&apos;s treatment; ii) Receipt of requisite funding for the Patient from alternative sources; iii) Eligibility of the Patient for free treatment under any scheme or the receipt of free treatment by other means; iv) Demise of the Patient; v) Fulfilment of the fundraising campaign&apos;s objectives; vi) Termination of the fundraising campaign for any reason; vii) Reduction in the cost of the treatment,
+                    </p>
+                    <p className="mt-2">
+                      Sanjivani shall have the discretion to use such surplus funds to allocate to i) other patients on Sanjivani for their life-saving treatment and/or donors to provide health benefits with object to maximize social impact; and/or ii) donors of the fundraising campaign at the sole discretion of Sanjivani may be offered the option to claim a pro-rata refund of surplus funds.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-700 uppercase not-italic mb-1">PATIENT DEATH UPDATE</h4>
+                    <p>
+                      Upon the death of the patient, the Campaigner / close relative / POC on behalf of the patient shall be duty bound to inform Sanjivani immediately within two (2) hours of such occurrence and turn off the donations tab (through the internal access granted) on the campaign on Sanjivani Platform in order to stop fundraising on the campaign. In the event Campaigner or authorised/designated POC on behalf of the patient fails to do so and campaign continues raising funds due to such non-information/non action, the Campaigner or authorised/designated POC on behalf of the patient shall be personally liable any consequences thereof; further, Sanjivani shall be disclaimed of all the liabilities occurring with respect to such post death fundraising and the such liability in entirety shall accrue on Campaigner or authorised/designated POC on behalf of the patient. In the event of death of the patient, Sanjivani&apos;s Patient Death Policy at Terms Of Use shall apply.
+                    </p>
+                  </div>
+                </div>
+                {!isExpanded && (
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+                )}
+              </div>
+              <div className="mt-4 flex justify-center border-t border-slate-100 pt-3">
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="text-sm font-bold text-[#16836A] hover:text-[#0f5f4d] transition-colors focus:outline-none"
+                >
+                  {isExpanded ? 'Read Less' : 'Read More'}
+                </button>
+              </div>
+            </div>
+
           </div>
           {/* END LEFT COLUMN */}
 
@@ -693,14 +746,14 @@ export default function CampaignPage() {
                   <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-300 text-[10px] text-slate-400">i</span>
                 </p>
 
-                <button onClick={openDonation} className="mt-4 w-full rounded-lg bg-[#E87B35] py-3.5 text-center font-extrabold text-white shadow-md transition hover:bg-[#D96B26] active:scale-[0.98]">
+                <button onClick={openDonation} className="mt-4 w-full rounded-full bg-[#E87B35] py-3.5 text-center font-extrabold text-white shadow-md transition hover:bg-[#D96B26] active:scale-[0.98]">
                   DONATE NOW
                   <span className="block text-[10px] font-bold tracking-wider opacity-80">(INDIAN TAX BENEFITS AVAILABLE)</span>
                 </button>
 
                 <p className="mt-4 text-center text-xs text-slate-500">Every social media share can bring &#8377;5,000</p>
 
-                <button className="mt-3 w-full rounded-lg bg-[#1877F2] py-3 text-center text-sm font-bold text-white transition hover:bg-[#1565D8]">
+                <button className="mt-3 w-full rounded-full bg-[#1877F2] py-3 text-center text-sm font-bold text-white transition hover:bg-[#1565D8]">
                   SHARE ON FACEBOOK
                 </button>
 

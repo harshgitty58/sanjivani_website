@@ -52,7 +52,7 @@ export default function DonationPage() {
   }, []);
 
   return (
-    <div className="flex flex-col bg-[#f2f1f9] py-16 md:py-24">
+    <div className="flex flex-col bg-[#f2f1f9] pt-0 pb-6 md:pt-0 md:pb-6">
       <div className="px-4 md:px-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
           Our Projects

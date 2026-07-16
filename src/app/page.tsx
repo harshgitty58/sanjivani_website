@@ -3,9 +3,8 @@ import FaqSection from '@/app/components/FaqSection';
 import Footer from '@/app/components/Footer';
 // import Popular from '@/app/components/Popular';
 // import Vehicle from '@/app/components/vehicle';
-// import VideoTravelBlogs from '@/app/components/VideoTravelBlogs';
+import VideoTravelBlogs from '@/app/components/VideoTravelBlogs';
 import EmergencyART from '@/app/components/Emergency-ART';
-import ContactSection from '@/app/components/ContactSection';
 import Explore from '@/app/components/Explore';
 //import Businesspartner from '@/app/components/Businesspartner';
 import Appbar from "./components/screens/Appbar";
@@ -14,10 +13,10 @@ import Donation from '@/app/components/Donation';
 import OurJourney from '@/app/components/OurJourney';
 import Portfo from '@/app/components/Portfo';
 import ChatBot from '@/app/components/ChatBot';
-// import Reviews from '@/app/components/Reviews';
+import Reviews from '@/app/components/Reviews';
 import Testimonial from '@/app/components/Testimonial';
 import SDGGrid from '@/app/components/SDGGrid';
-// import Rank from '@/app/components/Rank';
+import Rank from '@/app/components/Rank';
 // import SocialMenu from '@/app/components/SocialMenu';
 
 export default function Home() {
@@ -32,19 +31,18 @@ export default function Home() {
         />
       </div>
       <OurJourney />
-      {/* <Rank /> */}
+      <Rank />
       <Portfo />
       <Donation />
-      {/* <VideoTravelBlogs /> */}
+      <VideoTravelBlogs />
       {/* <Businesspartner /> */}
       {/* <Vehicle />     */}
       {/* <Popular /> */}
       <EmergencyART />
       <SDGGrid />
-      <ContactSection />
       <Explore />
       <Testimonial />
-      {/* <Reviews /> */}
+      <Reviews />
       <FaqSection />
       <Download />
       <ChatBot />

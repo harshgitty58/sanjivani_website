@@ -26,7 +26,7 @@ const goals = [
 
 export default function SDGGrid() {
   return (
-    <div className="bg-[#f2f1f9] py-16 px-4 sm:px-6 md:px-10">
+    <div className="bg-[#f2f1f9] pt-16 pb-8 px-4 sm:px-6 md:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-indigo-900 tracking-tight">

@@ -28,7 +28,7 @@ export default function Portfo() {
   };
 
   return (
-    <section className="relative w-full bg-[#f2f1f9] py-16 md:py-24">
+    <section className="relative w-full bg-[#f2f1f9] pt-4 pb-2 md:pt-6 md:pb-4">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-indigo-800 mb-8">
         Our Portfolios
       </h2>
