@@ -169,10 +169,10 @@ export default function MapLandingPage() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200 pointer-events-none" />
 
       {/* Main Map Presentation */}
-      <main className="flex-1 relative z-10 flex flex-col items-center justify-center px-4 py-8 md:px-8">
+      <main className="flex-1 relative z-10 flex flex-col items-center justify-center px-4 py-2 md:px-8">
         
         {/* Select Region Badge */}
-        <div className="text-center mb-6 flex flex-col items-center">
+        <div className="text-center mb-2 flex flex-col items-center">
           {/* Dynamic Map Selection Hint Badge */}
           <div className="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-4 py-1.5 text-xs shadow-md transition-all duration-200">
             <Info className="w-3.5 h-3.5 text-blue-600 shrink-0" />
@@ -183,7 +183,7 @@ export default function MapLandingPage() {
         </div>
 
         {/* Map Container (no card bounding box, plain transparent container) */}
-        <div className="w-full max-w-[95vw] md:w-auto h-[78vh] min-h-[600px] md:min-h-[700px] max-h-[calc(100vh-160px)] aspect-[612/696] flex items-center justify-center relative overflow-hidden group">
+        <div className="w-full max-w-[95vw] md:w-auto h-[90vh] min-h-[500px] max-h-[calc(100vh-80px)] aspect-[612/696] flex items-center justify-center relative overflow-hidden group">
 
           {/* SVG Map Canvas */}
           <svg
