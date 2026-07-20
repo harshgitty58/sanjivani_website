@@ -1,3 +1,7 @@
+'use client';
+
+import { Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Download from '@/app/components/Download';
 import FaqSection from '@/app/components/FaqSection';
 import Footer from '@/app/components/Footer';
@@ -16,10 +20,12 @@ import ChatBot from '@/app/components/ChatBot';
 import Reviews from '@/app/components/Reviews';
 import Testimonial from '@/app/components/Testimonial';
 import SDGGrid from '@/app/components/SDGGrid';
+import OutingPlanner from '@/app/components/OutingPlanner';
 import Rank from '@/app/components/Rank';
 // import SocialMenu from '@/app/components/SocialMenu';
+import MapLandingPage from '@/app/components/MapLandingPage';
 
-export default function Home() {
+function MainHomePage() {
   return (
     <div className="relative z-10 pt-11 overflow-x-hidden">
       <Appbar />
@@ -40,6 +46,7 @@ export default function Home() {
       {/* <Popular /> */}
       <EmergencyART />
       <SDGGrid />
+      <OutingPlanner />
       <Explore />
       <Testimonial />
       <Reviews />
@@ -49,5 +56,28 @@ export default function Home() {
       {/* <SocialMenu /> */}
       <Footer />
     </div>
-  )
+  );
+}
+
+function HomeContent() {
+  const searchParams = useSearchParams();
+  const state = searchParams ? searchParams.get('state') : null;
+
+  if (state) {
+    return <MainHomePage />;
+  }
+
+  return <MapLandingPage />;
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="flex min-h-screen items-center justify-center bg-[#F1F5F9]">
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-indigo-600 border-t-transparent" />
+      </div>
+    }>
+      <HomeContent />
+    </Suspense>
+  );
 }

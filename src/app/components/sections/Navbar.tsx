@@ -3,11 +3,13 @@
 import React, { useState } from 'react'
 import IconSection from './IconSection'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { X } from 'lucide-react'
 
 export default function Navbar() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const selectedState = searchParams ? searchParams.get('state') : null;
   const [menuOpen, setMenuOpen] = useState(false);
 
   const redirectToLogin = () => router.push('/login');
@@ -36,15 +38,24 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="flex items-center justify-between gap-3 max-w-screen-xl mx-auto px-3 sm:px-6 py-0 sm:py-1">
 
-          {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={redirectToHome}>
-            <Image
-              src="/images/sanjivani-logo.png"
-              alt="sanjivani-logo"
-              width={90}
-              height={70}
-              className="object-contain"
-            />
+          {/* Logo & Selected State */}
+          <div className="flex items-center gap-2">
+            <div className="flex-shrink-0 cursor-pointer" onClick={redirectToHome}>
+              <Image
+                src="/images/sanjivani-logo.png"
+                alt="sanjivani-logo"
+                width={90}
+                height={70}
+                className="object-contain"
+              />
+            </div>
+            {selectedState && (
+              <div className="flex items-center pl-2 border-l-2 border-slate-300 h-8">
+                <span className="text-slate-800 font-extrabold text-xs sm:text-sm tracking-wide uppercase select-none whitespace-nowrap">
+                  {selectedState}
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Desktop nav (hidden on mobile) */}

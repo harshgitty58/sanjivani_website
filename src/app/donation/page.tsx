@@ -234,11 +234,8 @@ export default function DonationPage() {
             </div>
           </section>
         )}
-                                                <progress
-                                                  className="h-2 w-full overflow-hidden rounded-full [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:bg-emerald-600 [&::-moz-progress-bar]:bg-emerald-600"
-                                                  value={progress}
-                                                  max={100}
-                                                />
+        <section className="mt-8">
+          <div className="mb-4 flex items-center justify-between gap-4">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">All campaigns</p>
               <h2 className="mt-1 text-xl font-black text-slate-900 sm:text-2xl">Every active fundraiser in one place</h2>
